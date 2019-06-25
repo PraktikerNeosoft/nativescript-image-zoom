@@ -21,7 +21,8 @@ export class ImageZoom extends ImageZoomBase {
     public createNativeView() {
         this._image = UIImageView.new();
         this._image.clipsToBounds = true;
-        this._image.contentMode = UIViewContentMode.ScaleAspectFit;
+        // this._image.contentMode = UIViewContentMode.ScaleAspectFit;
+        this._image.contentMode = UIViewContentModeScaleAspectFit;
         const nativeView = UIScrollView.new();
         nativeView.addSubview(this._image);
         nativeView.zoomScale = this.zoomScale;
